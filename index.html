@@ -2,12 +2,13 @@
 <!-- Website - www.codingnepalweb.com -->
 <html lang="en">
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+    <script type="text/javascript" src="netpie.js"></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>รดน้ำต้นไม้</title>
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="netpie.js"></script>
   </head>
   <body>
 
@@ -36,11 +37,11 @@
           <div class="text2">
             เวลาที่ตั้งไว้
           </div>
-          <div id="show" class="messages"><div id="111"><button class="d_but" onclick="removetime('111')">ลบ</button> 01:00 - 02:00</div></div>
+          <div id="show" class="messages"></div>
           <div class="outputt">
-            <input type="time" id="startTime" class="ttime"> - <input type="time" id="stopTime" class="ttime"><button class="add_but" onclick="addTime()">เพิ่ม</button>
+            <input type="time" id="startTime" class="ttime"><button class="add_but" onclick="addTime()">เพิ่ม</button>
           </div>
-          <button class="outp">รดน้ำ</button>
+          <button class="outp" onclick="engine()">รดน้ำ</button>
         </div>
 
       </div>
